@@ -23,19 +23,6 @@ a{
     color: var(--cor-de-link);
 }
 
-/*Neste desafio, gostariamos que praticassem a metodologia BEM, caso seintam a vontade 
-de utiliza-la. 
-
-Mas o que é o BEM?
-
-BEM (Block, Element, Modifier) ​​é uma abordagem baseada em componentes para o desenvolvimento
-web. A ideia por trás disso é dividir a interface do usuário em blocos independentes.
-Isso torna o desenvolvimento de interface fácil e rápido, mesmo com uma interface
-de usuário complexa, e permite a reutilização de código existente sem copiar e colar.
-
-Link da documentação oficial!
-https://en.bem.info/methodology/quick-start/*/
-
 /*Sessão Menu*/
 
 section.menu{
@@ -60,6 +47,11 @@ nav ul.menu__list {
 	justify-content: space-between;
 	width: 750px;
 	font-size: 16px;
+}
+
+.menu__list__item a:hover {
+	font-size: 18px;
+	font-weight: bold;
 }
 
 header img {
@@ -89,9 +81,9 @@ div.title__div {
 }
 
 section.title img.title__profile {
-	width: 260px;
-    height: 370px;
-    border-radius: 20%;
+	width: 230px;
+    height: 310px;
+    border-radius: 50%;
 }
 
 section.title div.title__div div.title__container h3 {
@@ -109,11 +101,17 @@ section.title div.title__div div.title__container h3 {
 
 section.title div.title__div div.title__container ul {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	align-items: center;
 	padding: 0;
 	font-size: 16px;
 	width: 500px;
+	cursor: pointer;
+}
+
+section.title div.title__div div.title__container ul li:hover {
+	font-size: 18px;
+	font-weight: bold;
 }
 
 
@@ -135,10 +133,6 @@ section.about div.about__container p {
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 16px;
-}
-
-section.about div.about__container img {
-	margin: 16px 0;
 }
 
 /*alinhando titulo de todas as sessoes*/
@@ -225,7 +219,6 @@ section.academic div.academic__courses__box {
 div.academic__courses__box ul {
 	margin: 0;
 	padding: 0;
-	text-align: center;
 }
 
 div.academic__courses__box ul li {
@@ -233,54 +226,215 @@ div.academic__courses__box ul li {
 	margin: 32px;
 }
 
-div.academic__courses__box ul li.academic__courses__item__img {
-	background-color: var(--color-caixas);
-	padding: 8%;
+.academic__courses__item__img {
+    width: 368px;
+    height: 286px;
+    background-color: var(--color-caixas);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
-div.academic__courses__box ul li img:nth-child(1) {
-	
+div.academic__courses__box ul li img {
+	width: auto;
+	height: auto;
 }
 
-/* img print site
+#cc50 {
+	width: 75%;
+	height: 75%;
+}
 
-height: 406px;
-width: 752px;
-left: 10px;
-top: 10px;
-border-radius: 0px;
-
-Rectangle 
-
-
-width: 752px;
-height: 406px;
-
-background: url(encriptador-figma.png);
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-border-radius: 0px;
-
- Inside auto layout 
-
-flex: none;
-order: 0;
-flex-grow: 0;
-
-*/
-
+/* Experiência Profissional*/
 section.experience{
+	padding: 5px 100px
+}
 
+.experiencie__box {
+	display: flex;
+	flex-direction: row;
+}
+
+#experiencie__box__01 {
+	margin-bottom: 55px;
+	margin-left: 150px;
+}
+
+#experiencie__box__02 {
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	margin-right: 150px;
+}
+
+.experience__img {
+	height: 406px;
+	width: 752px;
+	left: 10px;
+	top: 10px;
+	border-radius: 0px;
+}
+
+.experience__info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 26px;
+}
+
+#experience__info__02 {
+align-items: flex-start;
+margin-left: 150px;
+}
+
+.experience__title {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 700;	
+	font-size: 22px;
+	color: var(--color-titulos);
+}
+
+.experience__text {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	color: var(--color-titulos);
+}
+
+.experiencia__botao--repo {
+	width: 105px;
+	height: 51px;
+	left: 16px;
+	top: 16px;
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+	color: var(--azul-botoes);
+	margin-right: 15px;
+	border: 1px solid var(--azul-botoes);
+	cursor: pointer;
+}
+
+.experiencia__botao--demo {
+	width: 105px;
+	height: 51px;
+	left: 16px;
+	top: 16px;
+	background: var(--azul-botoes);
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+	color: #FFFFFF;
+	border: none;
+	cursor: pointer;
 }
 
 /*Contato*/
 
-section.formcontato{
+.formcontato__contacto {
+	display: flex;
+	padding: 130px 150px 65px 150px;
+	background-color: var(--color-fundo-azul);
+}
 
+.formcontato__text {
+	margin-left: 16px;
+	display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.formcontato__title {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 38px;
+	color: var(--color-titulos);
+	margin: 0;
+}
+
+.formcontato__subtext {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;
+	color: var(--color-titulos);
+	margin: 0;
+}
+
+.formcontato__input {
+	width: 100%;
+	height: 56px;
+	background: #FFFFFF;
+	border-radius: 4px;
+	border: none;
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	display: flex;
+	align-items: center;
+	color: #A2A2A2;
+}
+
+.formcontato__textarea {
+	width: 100%;
+	height: 133px;
+	border-radius: 4px;
+	border: none;
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	display: flex;
+	align-items: center;
+	color: #A2A2A2;
+}
+
+.formcontato__botao {
+	width: 165px;
+	height: 51px;
+	background: var(--azul-botoes);
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+	color: #FFFFFF;
+	border: none;
+	cursor: pointer;
 }
 
 /*footeer*/
+.footer {
+	display: flex;
+    width: 100%;
+    height: 102px;
+    background: #FFFFFF;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--color-titulos);
+    text-align: center;
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+}
 
-section.footer{
-   
+.footer__rodape__p {
+	margin: 0;
 }
 
